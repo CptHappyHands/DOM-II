@@ -8,6 +8,8 @@ const mapPic = document.querySelector('.img-content img')
 
 const destinationSection = document.querySelector('.content-destination')
 
+const navSec = document.querySelector('.main-navigation')
+
 //1
 logoSelect.addEventListener('mouseenter', function(event) {
     document.body.style.backgroundColor = "red"
@@ -60,8 +62,20 @@ document.addEventListener('keydown', spaceBar)
 
 //8
 
+window.addEventListener('scroll', function(event) {
+    document.body.style.backgroundColor = "green";
+    setTimeout(function(){
+       document.body.style.backgroundColor = "" 
+    }, 1000)
+});
 
 //9
-
+window.addEventListener('keydown', function(event){
+    navSec.style.backgroundColor = "black";
+});
 
 //10
+logoSelect.addEventListener('mouseout', function(event) {
+    document.body.style.backgroundColor = ""
+})
+
