@@ -34,18 +34,28 @@ mapPic.addEventListener('dblclick', function(event) {
 })
 
 //5
-destinationSection.addEventListener('focusin', function(event) {
-    destinationSection.textContent = "OH YEAH";
-    console.log("OH YEAH")
+destinationSection.addEventListener('wheel', function(event) {
+    destinationSection.textContent = "OH GOD STOP WHEELING";
+    setTimeout(function() {
+        destinationSection.textContent = "";
+    }, 1000)  
 })
 
 
 //6
-
+window.addEventListener('load', function(event) {
+    this.alert("OH YEAH! IT's ADVENTURE TIME")
+})
 
 
 //7
+function spaceBar(event) {
+    if( event.keyCode === 32) {
+        location.reload();
+    }
+}
 
+document.addEventListener('keydown', spaceBar)
 
 
 //8
